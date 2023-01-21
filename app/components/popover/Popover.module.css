@@ -1,0 +1,11 @@
+.popoverContent{
+    position: absolute;
+    background: var(--gray-80);
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1088px) {
+    .popoverContent{
+        right: 0;
+    }
+}

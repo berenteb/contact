@@ -1,0 +1,48 @@
+.modalOverlay{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+}
+
+.modalContent{
+    border-radius: 8px;
+    background: var(--gray-100);
+    padding: 24px;
+}
+
+.modalContent input{
+    width: 100%;
+}
+
+.modalContent input, .modalContent h2, .imageSelector{
+    margin-bottom: 24px;
+}
+
+.buttonGroup{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    gap:8px;
+}
+
+.footerNavigation{
+    padding-top: 24px;
+}
+
+.imageSelector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+

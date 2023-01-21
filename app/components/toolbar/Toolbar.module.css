@@ -1,0 +1,72 @@
+.toolbarContent{
+    grid-row: 2;
+    grid-column: 2;
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: var(--line);
+    overflow: hidden;
+}
+.toolbarSide{
+    display: flex;
+    align-items: center;
+    grid-row: 2;
+    padding: 24px;
+    border-top: var(--line);
+    border-bottom: var(--line);
+}
+.toolbarSide.right{
+    justify-content: flex-end;
+}
+
+.mobileToolbar{
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+    border-left: var(--line);
+    border-right: var(--line);
+}
+.mobileToolbar button{
+    display: none;
+}
+
+.toolbarButtons{
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+
+.toolbarButtons .special{
+    margin-left: 16px;
+}
+
+.onlyMobile{
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .onlyMobile{
+        display: flex;
+    }
+    .onlyDesktop{
+        display: none;
+    }
+    .toolbarSide{
+        display: none;
+    }
+    .toolbarContent{
+        grid-column: 1;
+    }
+    .mobileToolbar{
+        grid-column: 1;
+
+    }
+    .mobileToolbar button{
+        display: flex;
+    }
+}

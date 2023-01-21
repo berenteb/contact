@@ -1,0 +1,43 @@
+.contactListItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactListItem:hover .contactListItemButtons{
+    visibility: visible;
+}
+
+.contactListItemImage{
+    object-fit: fill;
+    border-radius: 1000px;
+    object-position: center;
+    margin-right: 16px;
+    border: 1px solid var(--gray-60);
+    box-sizing: border-box;
+}
+
+.contactListItemContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactListItem h3 {
+    margin: 0;
+}
+
+.contactListItemMessage{
+    color: var(--text-32);
+    margin: 0;
+}
+
+.contactListItemButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    gap:8px;
+}
+
+.popoverCloseExclude{}

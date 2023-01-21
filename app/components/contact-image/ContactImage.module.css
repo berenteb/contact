@@ -1,0 +1,9 @@
+
+.imagePreview{
+    object-position: center;
+    object-fit: cover;
+    border: 1px solid var(--gray-70);
+    margin-right: 16px;
+    border-radius: 1000px;
+    background: linear-gradient(0deg, var(--gray-60) 0%, var(--gray-10) 100%);
+}
