@@ -14,18 +14,14 @@ export function Button({
   icon,
   children,
   className,
-  style,
   ...props
 }: ButtonProps) {
   const classes: string[] = [variant];
   if (className) classes.push(className);
   if (!children) classes.push("icon");
+  else if (icon) classes.push("iconText");
   return (
-    <button
-      className={classNames(...classes)}
-      {...props}
-      style={{ paddingLeft: icon && children ? "12px" : undefined, ...style }}
-    >
+    <button className={classNames(...classes)} {...props}>
       {icon && <div className="iconWrapper">{icon}</div>}
       {children}
     </button>

@@ -5,6 +5,7 @@ import {
   PropsWithChildren,
   ReactNode,
 } from "react";
+import { classNames } from "@/utils/classNames";
 
 interface FileUploadProps extends PropsWithChildren {
   name: string;
@@ -14,14 +15,13 @@ interface FileUploadProps extends PropsWithChildren {
 }
 
 const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
-  ({ name, icon, onChange, style, children }, ref) => {
+  ({ name, icon, onChange, children, style }, ref) => {
+    const classes: string[] = ["fileUploadButton"];
+    if (!children) classes.push("icon");
+    else if (icon) classes.push("iconText");
     return (
       <>
-        <label
-          className="fileUploadButton"
-          htmlFor={name}
-          style={{ paddingLeft: icon ? "12px" : undefined, ...style }}
-        >
+        <label className={classNames(...classes)} htmlFor={name} style={style}>
           <input
             ref={ref}
             type="file"

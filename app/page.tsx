@@ -5,6 +5,9 @@ import { MobileToolbar } from "@/app/components/toolbar/MobileToolbar";
 
 import styles from "./page.module.css";
 
+// Yeah, this is bad
+export const revalidate = 0;
+
 export default async function Home() {
   const { contacts } = await getContacts();
   return (

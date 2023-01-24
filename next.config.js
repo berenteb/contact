@@ -12,7 +12,9 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ["cdn-contact-images.s3.eu-central-1.amazonaws.com"],
+    domains: [
+      process.env.AWS_S3_BUCKET_NAME + ".s3.eu-central-1.amazonaws.com",
+    ],
   },
 };
 
